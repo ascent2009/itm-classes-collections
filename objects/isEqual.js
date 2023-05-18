@@ -8,11 +8,14 @@
  */
 
 export const isEqual = (firstObject, secondObject) => {
-    throw new Error(`Напишите здесь свое решение ${firstObject} ${secondObject}`);
+  // throw new Error(`Напишите здесь свое решение ${firstObject} ${secondObject}`);
+  const firstObjKeys = Object.keys(firstObject);
+  const secondObjKeys = Object.keys(secondObject);
+  return firstObjKeys.every((key) => firstObject[key] === secondObject[key]);
 };
 
-const data = {a: 1, b: 1};
-const data2 = {a: 1, b: 1};
-const data3 = {a: 1, b: 2};
+const data = { a: 1, b: 1 };
+const data2 = { a: 1, b: 1 };
+const data3 = { a: 1, b: 2 };
 console.log(isEqual(data, data2)); // true
 console.log(isEqual(data, data3)); // false
