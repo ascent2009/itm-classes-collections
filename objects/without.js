@@ -8,8 +8,10 @@
  */
 
 export const without = (object, ...args) => {
-    throw new Error(`Напишите здесь свое решение ${object} ${args}`);
+  // throw new Error(`Напишите здесь свое решение ${object} ${args}`);
+  let index = args.indexOf(args[1]);
+  return Object.fromEntries(Object.entries(object).slice(0, index));
 };
 
-const data = {a: 1, b: 2, c: 3};
-console.log(without(data, 'b', 'c')); // { a: 1 }
+const data = { a: 1, b: 2, c: 3 };
+console.log(without(data, "b", "c")); // { a: 1 }
