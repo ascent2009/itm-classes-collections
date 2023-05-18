@@ -10,10 +10,15 @@
  */
 
 export const isEmpty = (object) => {
-    throw new Error(`Напишите здесь свое решение ${object}`);
+  // throw new Error(`Напишите здесь свое решение ${object}`);
+  for (let key in object) {
+    if (object[key] === undefined) return true;
+    return false;
+  }
+  return true;
 };
 
-const data = {a: 1, b: undefined};
-const data2 = {a: undefined};
+const data = { a: 1, b: undefined };
+const data2 = { a: undefined };
 console.log(isEmpty(data)); // false
 console.log(isEmpty(data2)); // true
