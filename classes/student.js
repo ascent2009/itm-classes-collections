@@ -7,21 +7,29 @@
  */
 
 class User {
-    constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
-    }
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
 
-    getFullName() {
-        return this.name + ' ' + this.surname;
-    }
+  getFullName() {
+    return this.name + " " + this.surname;
+  }
 }
 
 class Student {
-    // Ваш код...
+  // Ваш код...
+  constructor(name, surname, year) {
+    super(name, surname);
+    this.year = year;
+  }
+  getCourse() {
+    let currentYear = new Date().getFullYear();
+    return currentYear - this.year;
+  }
 }
 
-const student = new Student('Иван', 'Иванов', 2020);
+const student = new Student("Иван", "Иванов", 2020);
 
 console.log(worker.name); //выведет 'Иван'
 console.log(worker.surname); //выведет 'Иванов'
