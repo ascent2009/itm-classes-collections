@@ -17,7 +17,7 @@ class User {
   }
 }
 
-class Student {
+class Student extends User {
   // Ваш код...
   constructor(name, surname, year) {
     super(name, surname);
